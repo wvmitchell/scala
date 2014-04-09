@@ -1,7 +1,15 @@
 class Bob {
 
   def hey(statement: String) : String = {
-    return "Whatever."
+    if(shouting(statement)){
+      return "Woah, chill out!"
+    } else {
+      return "Whatever."
+    }
+  }
+
+  def shouting(statement: String) : Boolean = {
+    statement == statement.toUpperCase()
   }
 
 }
